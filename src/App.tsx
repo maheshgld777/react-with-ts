@@ -1,20 +1,14 @@
 import "./App.css";
-import { Button } from "./components/Button";
-import { Input } from "./components/Input";
+import { Container } from "./components/Container";
 
 function App() {
   return (
     <div className="App">
-      <Button
-        handleClick={(event, id) => {
-          console.log("Button Clicked", event, 5);
-        }}
-      />
-
-      <Input
-        value="Mahesh"
-        handleChange={(event) => {
-          console.log(event);
+      <Container
+        style={{
+          borderColor: "black",
+          alignItems: "center",
+          padding: "10px 20px 40px 80px",
         }}
       />
     </div>
