@@ -1,32 +1,18 @@
 import "./App.css";
 import { Greet } from "./components/Greet";
-import { Person } from "./components/Person";
-import { PersonList } from "./components/PersonList";
+import { Heading } from "./components/Heading";
+import { Oscar } from "./components/Oscat";
+import { Status } from "./components/Status";
 
 function App() {
-  const personName = {
-    first: "Mahesh",
-    last: "Pattar",
-  };
-
-  const personList = [
-    {
-      id: 1,
-      first: "Joe",
-      last: "Cough",
-    },
-    {
-      id: 2,
-      first: "Simon",
-      last: "Jerome",
-    },
-  ];
-
   return (
     <div className="App">
-      <Greet name="Mahesh" messageCount={10} isLoggedIn={false} />
-      <Person name={personName} />
-      <PersonList names={personList} />
+      <Greet name="Mahesh" isLoggedIn={true} messageCount={5} />
+      <Status status="success" />
+      <Heading>Placeholder Text</Heading>
+      <Oscar>
+        <Heading>Award goes to Mahesh Pattar</Heading>
+      </Oscar>
     </div>
   );
 }
